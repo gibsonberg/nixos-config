@@ -8,10 +8,24 @@
   # link the configuration file in current directory to the specified location in home directory
 #   home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
   dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-uri = "file://"; # Insert path to wallpaper file within quotes 
       picture-uri-dark = "file://"; # Dark mode wallpaper file
+    };
+
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = with pkgs.gnomeExtensions; [
+        blur-my-shell.extensionUuid
+	clipboard-indicator.extensionUuid
+	lock-keys.extensionUuid
+	dash-to-dock.extensionUuid
+      ];
     };
   };
 
@@ -35,6 +49,13 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+
+    # GNOME
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.lock-keys
+    gnomeExtensions.dash-to-dock
+
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
 
