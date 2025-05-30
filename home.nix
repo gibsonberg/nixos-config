@@ -5,19 +5,21 @@
   home.username = "gibson";
   home.homeDirectory = "/home/gibson";
 
-  # link the configuration file in current directory to the specified location in home directory
-#   home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
+  # TODO: separate out GNOME config into separate file
   dconf.settings = {
+    # Set dark mode
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
 
+    # Set wallpaper
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-      picture-uri = "file://"; # Insert path to wallpaper file within quotes 
-      picture-uri-dark = "file://"; # Dark mode wallpaper file
+      picture-uri = "file:///home/gibson/Pictures/test-wp.png"; # Insert path to wallpaper file within quotes 
+      picture-uri-dark = "file:///home/gibson/Pictures/test-wp.png"; # Dark mode wallpaper file
     };
 
+    # Enable extensions
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
@@ -26,6 +28,21 @@
 	lock-keys.extensionUuid
 	dash-to-dock.extensionUuid
       ];
+    };
+    # Configure extensions
+    "org/gnome/shell/extensions/lockkeys" = {
+      style = "show-hide";
+    };
+    "org/gnome/shell/extensions/blur-my-shell/panel" = {
+      blur = false;
+    };
+    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+    blur = false;
+    };
+    "org/gnome/shell/extensions/dash-to-dock" = {
+    custom-background-color = true;
+    background-color = "rgb(0,0,0)";
+    click-action = "previews";
     };
   };
 
