@@ -6,7 +6,14 @@
   home.homeDirectory = "/home/gibson";
 
   # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
+#   home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
+  dconf.settings = {
+    "org/gnome/desktop/background" = {
+      color-shading-type = "solid";
+      picture-uri = "file://"; # Insert path to wallpaper file within quotes 
+      picture-uri-dark = "file://"; # Dark mode wallpaper file
+    };
+  };
 
   # link all files in `./scripts` to `~/.config/i3/scripts`
   # home.file.".config/i3/scripts" = {
