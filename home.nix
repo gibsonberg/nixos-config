@@ -15,6 +15,7 @@
     # Set wallpaper
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
+      # TODO: swap out wallpaper for non-test image, move to nix-config dir
       picture-uri = "file:///home/gibson/Pictures/test-wp.png"; # Insert path to wallpaper file within quotes 
       picture-uri-dark = "file:///home/gibson/Pictures/test-wp.png"; # Dark mode wallpaper file
     };
@@ -72,6 +73,7 @@
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.lock-keys
     gnomeExtensions.dash-to-dock
+    # gnome-tweaks
 
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
