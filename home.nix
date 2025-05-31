@@ -29,6 +29,12 @@
 	lock-keys.extensionUuid
 	dash-to-dock.extensionUuid
       ];
+
+      favorite-apps = [
+        "zen.desktop"
+	"org.gnome.Nautilus.desktop"
+	"net.nokyan.Resources.desktop"
+      ];
     };
     # Configure extensions
     "org/gnome/shell/extensions/lockkeys" = {
