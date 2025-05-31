@@ -12,6 +12,8 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Zen Browser flake as stop-gap until package developed
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs =
@@ -21,6 +23,7 @@
         # The host with hostname 'riverview' will use this configuration.
 	riverview = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+	  specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
             
