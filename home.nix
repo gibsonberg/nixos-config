@@ -20,8 +20,8 @@
       picture-uri-dark = "file:///home/gibson/nixos-config/wallpaper.jpg";
     };
 
-    # Enable extensions
     "org/gnome/shell" = {
+      # Enable Extensions
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         blur-my-shell.extensionUuid
@@ -29,7 +29,8 @@
 	lock-keys.extensionUuid
 	dash-to-dock.extensionUuid
       ];
-
+      
+      # Set apps pinned to dash
       favorite-apps = [
         "zen.desktop"
 	"org.gnome.Nautilus.desktop"
@@ -64,6 +65,9 @@
     "org/gnome/system/location" = {
       enabled = true;
     };
+    "org/gnome/desktop/wm/preferences" = {
+      focus-mode = "sloppy";
+    };
     "org/gtk/settings/file-chooser" = {
       clock-format = "12h"; # also performed when setting gnome interface to 12h
     };
@@ -85,6 +89,13 @@
     "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
     ];
+
+    # Configure Gnome Apps
+    "org/gnome/TextEditor" = {
+      highlight-current-line = true;
+      restore-session = false;
+      keybindings = "vim";
+    };
   };
 
   # Packages that should be installed to the user profile.
