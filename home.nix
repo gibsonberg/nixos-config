@@ -63,12 +63,19 @@
     };
 
     # Keybindings
+    ## Shell
+    "org/gnome/shell/keybindings" = {
+      screenshot = [ "Print" ];
+      show-screenshot-ui = [ "<Shift><Super>s" ];
+    };
     ## Custom
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Launch Terminal";
       binding = "<Super>t";
       command = "kgx";
     };
+    ### Makes custom keybinds show up in settings
+    ### It looks like they work without it, but they don't show
     "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
     ];
