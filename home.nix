@@ -16,8 +16,8 @@
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       # TODO: swap out wallpaper for non-test image, move to nix-config dir
-      picture-uri = "file:///home/gibson/Pictures/test-wp.png"; # Insert path to wallpaper file within quotes 
-      picture-uri-dark = "file:///home/gibson/Pictures/test-wp.png"; # Dark mode wallpaper file
+      picture-uri = "file:///home/gibson/nixos-config/wallpaper.jpg";
+      picture-uri-dark = "file:///home/gibson/nixos-config/wallpaper.jpg";
     };
 
     # Enable extensions
