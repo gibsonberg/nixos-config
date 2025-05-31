@@ -45,25 +45,34 @@
     background-color = "rgb(0,0,0)";
     click-action = "previews";
     };
+
+    # Additional Settings
+    # Sorted alphabetically by dconf path
+    "org/gnome/desktop/datetime" = {
+      automatic-timezone = true;
+    };
+    "org/gnome/desktop/interface" = {
+      clock-format = "12h";
+      show-battery-percentage = true;
+    };
+    "org/gnome/system/location" = {
+      enabled = true;
+    };
+    "org/gtk/settings/file-chooser" = {
+      clock-format = "12h"; # also performed when setting gnome interface to 12h
+    };
+
+    # Keybindings
+    ## Custom
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Launch Terminal";
+      binding = "<Super>t";
+      command = "kgx";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+    ];
   };
-
-  # link all files in `./scripts` to `~/.config/i3/scripts`
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
-
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-
-  # set cursor size and dpi for 4k monitor
-  # xresources.properties = {
-  # "Xcursor.size" = 16;
-  # "Xft.dpi" = 172;
-  # };
 
   # Packages that should be installed to the user profile.
   # TODO: Separate out into separate file, break down by host?
@@ -119,21 +128,6 @@
 #      aws.disabled = true;
 #      gcloud.disabled = true;
 #      line_break.disabled = true;
-#    };
-#  };
-
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
-#  programs.alacritty = {
-#    enable = true;
-#    # custom settings
-#    settings = {
-#      env.TERM = "xterm-256color";
-#      font = {
-#        size = 12;
-#        draw_bold_text_with_bright_colors = true;
-#      };
-#      scrolling.multiplier = 5;
-#      selection.save_to_clipboard = true;
 #    };
 #  };
 

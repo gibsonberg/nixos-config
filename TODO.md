@@ -9,7 +9,10 @@ In no particular order,
     - Other remaining GNOME settings not yet covered
 - Configure software
     - I know that Amberol and Celluloid can have their configurations altered... figure out how that works
+    - Set up bashrc
 - Modularize nixos-config directory
 - Experiment with new software
-  - New shell (zsh or fish?)
-  - Rust-based utilities (See NoBoilerPlate video)
+    - New shell (zsh or fish?)
+    - Rust-based utilities (See NoBoilerPlate video)
+- Set up LUKS autologin
+- Set up Plymouth
