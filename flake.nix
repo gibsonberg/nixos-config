@@ -12,6 +12,7 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # test
   };
 
   outputs =
