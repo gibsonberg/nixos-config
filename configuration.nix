@@ -108,8 +108,9 @@
     wget
     git
 
-    # Zen Browser Flake requirement -- see flake.nix
-    inputs.zen-browser.packages."${system}".specific
+    # Zen Browser
+    # Remove with flake once nixpkgs packages this
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
   # Set the default editor

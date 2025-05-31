@@ -12,8 +12,9 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Zen Browser flake as stop-gap until package developed
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    # Zen Browser Flake until nixpkgs adds it
+    # Replace and garbage-collect eventually
+    zen-browser.url = "github:youwen5/zen-browser-flake";
   };
 
   outputs =
