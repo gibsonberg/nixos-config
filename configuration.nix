@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -107,6 +107,10 @@
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
+
+    # Zen Browser
+    # Remove with flake once nixpkgs packages this
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
   # Set the default editor

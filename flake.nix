@@ -12,7 +12,9 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # test
+    # Zen Browser Flake until nixpkgs adds it
+    # Replace and garbage-collect eventually
+    zen-browser.url = "github:youwen5/zen-browser-flake";
   };
 
   outputs =
@@ -22,6 +24,7 @@
         # The host with hostname 'riverview' will use this configuration.
 	riverview = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+	  specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
             
