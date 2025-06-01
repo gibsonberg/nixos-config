@@ -107,6 +107,7 @@
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
+    tree
 
     # Zen Browser
     # Remove with flake once nixpkgs packages this

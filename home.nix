@@ -39,6 +39,7 @@
     btop # htop replacement
     iotop # io monitoring
     iftop # network monitoring
+    yt-dlp
    # ripgrep # recursively searches directories for a regex pattern
    # nmap # A utility for network discovery and security auditing
 
