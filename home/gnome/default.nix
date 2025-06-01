@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./extensions.nix
+  ];
+
   dconf.settings = {
     # Set dark mode
     "org/gnome/desktop/interface" = {
@@ -10,42 +14,17 @@
     # Set wallpaper
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-      # TODO: swap out wallpaper for non-test image, move to nix-config dir
       picture-uri = "file:///home/gibson/nixos-config/wallpaper.jpg";
       picture-uri-dark = "file:///home/gibson/nixos-config/wallpaper.jpg";
     };
 
     "org/gnome/shell" = {
-      # Enable Extensions
-      disable-user-extensions = false;
-      enabled-extensions = with pkgs.gnomeExtensions; [
-        blur-my-shell.extensionUuid
-	clipboard-indicator.extensionUuid
-	lock-keys.extensionUuid
-	dash-to-dock.extensionUuid
-      ];
-      
       # Set apps pinned to dash
       favorite-apps = [
         "zen.desktop"
 	"org.gnome.Nautilus.desktop"
 	"net.nokyan.Resources.desktop"
       ];
-    };
-    # Configure extensions
-    "org/gnome/shell/extensions/lockkeys" = {
-      style = "show-hide";
-    };
-    "org/gnome/shell/extensions/blur-my-shell/panel" = {
-      blur = false;
-    };
-    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
-    blur = false;
-    };
-    "org/gnome/shell/extensions/dash-to-dock" = {
-    custom-background-color = true;
-    background-color = "rgb(0,0,0)";
-    click-action = "previews";
     };
 
     # Additional Settings

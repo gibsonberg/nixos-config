@@ -2,6 +2,12 @@
 
 {
 
+  #######################################
+  #                                     #
+  # Gibson's Home Manager Configuration #
+  #                                     #
+  #######################################
+
   imports = [
     ./home/gnome
   ];
@@ -15,10 +21,6 @@
   home.packages = with pkgs; [
 
     # GNOME
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.clipboard-indicator
-    gnomeExtensions.lock-keys
-    gnomeExtensions.dash-to-dock
     # gnome-tweaks
 
     # Graphical Tools
