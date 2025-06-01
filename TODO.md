@@ -21,3 +21,7 @@ In no particular order,
 - Set up Plymouth
 - Turn on automatic updates
 - Turn on automatic garbage collection
+- Prep config for multi-host & multi user
+    - Need to set up so that it will pick the correct host
+        - I believe this just requires an entry in flake.nix for the new hostname
+          see: ryan4yin nixos-config

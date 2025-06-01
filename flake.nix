@@ -22,11 +22,12 @@
     {
       nixosConfigurations = {
         # The host with hostname 'riverview' will use this configuration.
+	# TODO: prep for multi-host if want to continue on 'hiawatha'
 	riverview = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
 	  specialArgs = { inherit inputs; };
           modules = [
-            ./configuration.nix
+            ./hosts/riverview 
             
             # make home-manager as a module of nixos
 	    # so that home-manager configuration will
