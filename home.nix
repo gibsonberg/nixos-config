@@ -96,6 +96,9 @@
       restore-session = false;
       keybindings = "vim";
     };
+    "io/bassi/Amberol" = {
+      background-play = false;
+    };
   };
 
   # Packages that should be installed to the user profile.

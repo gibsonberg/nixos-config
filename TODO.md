@@ -4,14 +4,15 @@ In no particular order,
 
 - Further configure GNOME
     - Remove unnecessary & redundant software (Tour, Music, etc.)
-    - Other remaining GNOME settings not yet covered
     - Configure the following unused keys on laptop:
         - F8/Media? Activates "Super+P"
         - F10/Camera Toggle, Activates "Web Cam"
         - F12/MyAsus, Activates Launch1
+    - Set default apps for file types declaratively
 - Configure software
-    - I know that Amberol and Celluloid can have their configurations altered... figure out how that works
+    - Configure celluloid (doesn't use dconf?)
     - Set up bashrc
+    - Install Steam (different from normal nixpkgs)
 - Modularize nixos-config directory
 - Experiment with new software
     - New shell (zsh or fish?)
