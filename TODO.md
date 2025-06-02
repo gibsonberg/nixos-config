@@ -15,7 +15,6 @@ In no particular order,
     - Configure fastfetch
     - Install Steam (different from normal nixpkgs)
 - Modularize nixos-config directory
-    - Make multi-user possible
     - Separate installed programs from home.nix & configuration.nix
     - Separate important system things that should be universal between hosts (enable flakes, etc.)
 - Experiment with new software
@@ -25,3 +24,4 @@ In no particular order,
 - Set up Plymouth
 - Turn on automatic updates
 - Turn on automatic garbage collection
+- Set up multi-user in flake.nix?
