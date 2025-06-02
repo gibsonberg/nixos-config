@@ -15,7 +15,7 @@ In no particular order,
     - Configure fastfetch
     - Install Steam (different from normal nixpkgs)
 - Modularize nixos-config directory
-    - Separate installed programs from home.nix & configuration.nix
+    - Separate installed programs from configuration.nix
     - Separate important system things that should be universal between hosts (enable flakes, etc.)
 - Experiment with new software
     - New shell (zsh or fish?)
