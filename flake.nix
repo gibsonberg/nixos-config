@@ -37,7 +37,8 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.gibson = import ./home.nix;
+              # TODO: set up flake to alllow for multiple users?
+	      home-manager.users.gibson = import ./users/gibson/home.nix;
 
               # Optionally, use home-manager.extraSpecialArgs to pass
               # arguments to home.nix

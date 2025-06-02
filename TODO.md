@@ -12,8 +12,12 @@ In no particular order,
 - Configure software
     - Configure celluloid (doesn't use dconf?)
     - Set up bashrc
+    - Configure fastfetch
     - Install Steam (different from normal nixpkgs)
 - Modularize nixos-config directory
+    - Make multi-user possible
+    - Separate installed programs from home.nix & configuration.nix
+    - Separate important system things that should be universal between hosts (enable flakes, etc.)
 - Experiment with new software
     - New shell (zsh or fish?)
     - Rust-based utilities (See NoBoilerPlate video)
@@ -21,7 +25,3 @@ In no particular order,
 - Set up Plymouth
 - Turn on automatic updates
 - Turn on automatic garbage collection
-- Prep config for multi-host & multi user
-    - Need to set up so that it will pick the correct host
-        - I believe this just requires an entry in flake.nix for the new hostname
-          see: ryan4yin nixos-config
