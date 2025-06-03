@@ -10,8 +10,7 @@ In no particular order,
     - Adjust wallpaper dir
 - Configure software
     - Configure celluloid (doesn't use dconf?)
-    - Set up bashrc
-    - Configure fastfetch
+    - Configure fastfetch & add to fish init
     - Install Steam (different from normal nixpkgs)
     - Configure Obsidian? Can this be done declaratively via home-manager?
         - Set plugins:
