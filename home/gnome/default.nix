@@ -78,6 +78,10 @@
     ];
 
     # Configure Gnome Apps
+    "org/gnome/Console" = {
+      use-system-font = false;
+      custom-font = "AdwaitaMono Nerd Font 11";
+    };
     "org/gnome/TextEditor" = {
       highlight-current-line = true;
       restore-session = false;

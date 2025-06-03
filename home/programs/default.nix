@@ -19,9 +19,10 @@
     
     # Command-line tools
     btop # htop replacement
-    fastfetch # device query util; TODO: include in bashrc
+    fastfetch # device query util; TODO: include in fish init 
     iftop # network monitoring
     iotop # io monitoring
+    starship # customizable prompt; see below
     yt-dlp
     # ripgrep # recursively searches directories for a regex pattern
     # nmap # networ discover/security auditing utility
@@ -29,19 +30,25 @@
     hugo # static site generator
     
     cowsay
+
+    # Fonts
+    nerd-fonts.adwaita-mono
   ];
 
-  programs.fish.enable = true;
+  programs = {
+    # Enable fish in home-manager; also necessary in nixos system config?
+    fish.enable = true;
   
  # starship - an customizable prompt for any shell
- # programs.starship = {
- #   enable = true;
- #   # custom settings
- #   settings = {
- #     add_newline = false;
- #     aws.disabled = true;
- #     gcloud.disabled = true;
- #     line_break.disabled = true;
- #   };
- # };
+    starship = {
+      enable = true;
+      # custom settings
+      settings = {
+        add_newline = false;
+        aws.disabled = true;
+        gcloud.disabled = true;
+        line_break.disabled = true;
+      };
+    };
+  };
 }
