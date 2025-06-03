@@ -4,9 +4,7 @@ In no particular order,
 
 - Further configure GNOME
     - Configure the following unused keys on laptop:
-        - F8/Media? Activates "Super+P"
         - F10/Camera Toggle, Activates "Web Cam"
-        - F12/MyAsus, Activates Launch1
     - Set default apps for file types declaratively
     - Adjust wallpaper dir
 - Configure software

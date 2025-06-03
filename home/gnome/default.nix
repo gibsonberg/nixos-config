@@ -64,10 +64,17 @@
       binding = "<Super>t";
       command = "kgx";
     };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      name = "Launch Resources";
+      binding = "Launch1";
+      command = "resources";
+    };
+    ### Makes custom keybinds show up in settings
     ### Makes custom keybinds show up in settings
     ### It looks like they work without it, but they don't show
     "org/gnome/settings-daemon/plugins/media-keys".custom-keybindings = [
       "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
     ];
 
     # Configure Gnome Apps
