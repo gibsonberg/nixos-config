@@ -1,8 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  ################################################
+  #                                              #
+  # Packages to be installed in the user profile #
+  #                                              #
+  ################################################
+  
   home.packages = with pkgs; [
-    # Packages to be installed to the user profile
     
     # GNOME
     # gnome-tweaks
@@ -38,18 +43,5 @@
   programs = {
     # Enable fish in home-manager; also necessary in nixos system config?
     fish.enable = true;
-  
- # starship - an customizable prompt for any shell
-    starship = {
-      enable = true;
-      settings = pkgs.lib.importTOML ./gnome.toml;
-      # Basic single line config
-#       settings = {
-#         add_newline = false;
-#         aws.disabled = true;
-#         gcloud.disabled = true;
-#         line_break.disabled = true;
-#       };
-    };
   };
 }

@@ -11,6 +11,7 @@
   imports = [
     ../../home/gnome
     ../../home/programs
+    ../../home/starship
   ];
 
   # Home directory and username

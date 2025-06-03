@@ -16,6 +16,7 @@ In no particular order,
     - Separate installed programs from main system config?
         - probably good to also move GNOME excludes
     - Separate important system things that should be universal between hosts (enable flakes, etc.)
+    - Have user subdirectories for home/system to allow user-specific settings that don't necessarily need to be applied to all users?
 - Experiment with new software
     - Rust-based utilities (See NoBoilerPlate video)
 - Set up multi-user in flake.nix?
