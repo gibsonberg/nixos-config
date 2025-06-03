@@ -22,11 +22,38 @@
   # LUKS
   boot.initrd.luks.devices."luks-576b561a-3fe7-4cf8-93b6-0824e6923e92".device = "/dev/disk/by-uuid/576b561a-3fe7-4cf8-93b6-0824e6923e92";
 
-  # Auto-login
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "gibson";
+  # Plymouth
+  boot = {
+    plymouth = {
+      enable = true;
+      theme = "abstract_ring_alt";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "abstract_ring_alt" ]; 
+        })
+      ];
+    };
+
+    consoleLogLevel = 3;
+    initrd = {
+      systemd.enable = true;
+      verbose = false;
+    };
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
   };
+
+  # Auto-login (TEMPORARILY DISABLED - known crash interaction w/ plymouth & initrd)
+  # NOTE: may need to be removed for multi-user setup
+  # services.displayManager.autoLogin = {
+  #   enable = true;
+  #   user = "gibson";
+  # };
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {

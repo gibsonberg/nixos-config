@@ -4,6 +4,7 @@ In no particular order,
 
 - Further configure GNOME
     - Configure the following unused keys on laptop:
+        - F8/Media? Activates "Super+P"
         - F10/Camera Toggle, Activates "Web Cam"
     - Set default apps for file types declaratively
     - Adjust wallpaper dir
@@ -23,6 +24,7 @@ In no particular order,
     - Separate important system things that should be universal between hosts (enable flakes, etc.)
 - Experiment with new software
     - Rust-based utilities (See NoBoilerPlate video)
-- Set up LUKS autologin
-- Set up Plymouth
 - Set up multi-user in flake.nix?
+- Revisit Autologin:
+    - It seems to WORK out of the box with LUKS: password is transferred to keyring
+    - HOWEVER, it seems to cause GNOME to crash soon after boot when paired w/ initrd, plymouth
