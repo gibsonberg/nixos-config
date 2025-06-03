@@ -11,12 +11,7 @@ In no particular order,
 - Configure software
     - Configure celluloid (doesn't use dconf?)
     - Configure fastfetch & add to fish init
-    - Install Steam (different from normal nixpkgs)
-    - Configure Obsidian? Can this be done declaratively via home-manager?
-        - Set plugins:
-            - nvim bindings?
-            - GNOME theme
-            - Advanced Tables or whatever else is necessary for my DND archive
+    - Make Steam use GNOME cursors
 - Modularize nixos-config directory
     - Separate installed programs from main system config?
         - probably good to also move GNOME excludes
