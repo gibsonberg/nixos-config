@@ -22,6 +22,12 @@
   # LUKS
   boot.initrd.luks.devices."luks-576b561a-3fe7-4cf8-93b6-0824e6923e92".device = "/dev/disk/by-uuid/576b561a-3fe7-4cf8-93b6-0824e6923e92";
 
+  # Auto-login
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "gibson";
+  };
+
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
     automatic = true;
