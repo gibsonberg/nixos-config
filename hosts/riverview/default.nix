@@ -8,7 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../home/gnome/debloat.nix
+      ../../home/gnome/debloat.nix # can this go in home-manager instead?
+      ../../users/gibson/nixos.nix # can this be made user-agnostic
     ];
 
   # Bootloader.

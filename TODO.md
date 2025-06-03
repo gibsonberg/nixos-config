@@ -24,7 +24,6 @@ In no particular order,
         - probably good to also move GNOME excludes
     - Separate important system things that should be universal between hosts (enable flakes, etc.)
 - Experiment with new software
-    - New shell (zsh or fish?)
     - Rust-based utilities (See NoBoilerPlate video)
 - Set up LUKS autologin
 - Set up Plymouth
