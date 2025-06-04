@@ -182,6 +182,8 @@
     wget
     git
     tree
+    wl-clipboard
+    ripgrep
 
     # Zen Browser
     # Remove with flake once nixpkgs packages this

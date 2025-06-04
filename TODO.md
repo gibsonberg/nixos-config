@@ -10,16 +10,16 @@ In no particular order,
     - Adjust wallpaper dir
     - Set icon theme (papyrus? other?)
 - Configure software
+    - Make GNOME exclusions/replacements defined in GNOME directory?
     - Configure celluloid (doesn't use dconf?)
     - Configure fastfetch & add to fish init
     - Make Steam use GNOME cursors
     - Configure Neovim
-        - :help clipboard
         - Plugins?
-            - relative line nums
             - telescope?
             - better nix highlighting?
             - nvim-cmp?
+        - Should nvim configuration actually be system-wide since install is system-wide?
 - Modularize nixos-config directory
     - Modularize host mainfile
         - Separate installed programs from main system config?
@@ -28,7 +28,6 @@ In no particular order,
     - Have user subdirectories for home/system to allow user-specific settings that don't necessarily need to be applied to all users?
 - Experiment with new software
     - Rust-based utilities (See NoBoilerPlate video)
-        - ripgrep
         - uutils coreutils?
         - fd?
         - bat?

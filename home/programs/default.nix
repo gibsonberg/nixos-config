@@ -13,14 +13,17 @@
     # gnome-tweaks
     
     # Graphical tools
-    alpaca
-    amberol
-    celluloid
-    dialect
-    gimp3
-    obsidian
-    onlyoffice-desktopeditors
-    resources
+    alpaca # local LLM client
+    amberol # audio player replacement
+    celluloid # video player replacement
+    dialect # translation
+    foliate # epub reader
+    gimp3 # image editor
+    gnome-solanum # pomodoro timer
+    obsidian # markdown editor/wiki
+    onlyoffice-desktopeditors # office suite
+    resources # system monitor
+    # transmission_4 # torrent client
     
     # Command-line tools
     btop # htop replacement
