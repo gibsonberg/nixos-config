@@ -14,8 +14,6 @@
     
     # Graphical tools
     alpaca # local LLM client
-    amberol # audio player replacement
-    celluloid # video player replacement
     dialect # translation
     foliate # epub reader
     gimp3 # image editor

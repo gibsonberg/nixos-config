@@ -10,7 +10,6 @@ In no particular order,
     - Adjust wallpaper dir
     - Set icon theme (papyrus? other?)
 - Configure software
-    - Make GNOME exclusions/replacements defined in GNOME directory?
     - Configure celluloid (doesn't use dconf?)
     - Configure fastfetch & add to fish init
     - Make Steam use GNOME cursors
