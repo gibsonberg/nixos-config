@@ -12,6 +12,7 @@
     ../../home/gnome
     ../../home/programs
     ../../home/starship
+    ../../home/neovim
   ];
 
   # Home directory and username
