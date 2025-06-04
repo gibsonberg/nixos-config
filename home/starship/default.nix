@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  ##########################
-  #                        #
-  # Starship configuration #
-  #                        #
-  ##########################
+  ###########################
+  #                         #
+  # Starship configuration. #
+  #                         #
+  ###########################
   
   # starship - an customizable prompt for any shell
   programs.starship = {

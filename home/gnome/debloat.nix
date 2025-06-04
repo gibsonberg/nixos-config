@@ -1,7 +1,12 @@
 { config, pkgs, inputs, ... }:
 
 {
-  # Remove unnecessary GNOME packages. Replacements are noted where applicable.
+  ############################################
+  #                                          #
+  # Remove unnecessary GNOME packages.       #
+  # Replacements are noted where applicable. #
+  #                                          #
+  ############################################
 
   environment.gnome.excludePackages = with pkgs; [
     geary # email client

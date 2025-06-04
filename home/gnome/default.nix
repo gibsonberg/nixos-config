@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  ############################################
+  #                                          #
+  # GNOME Desktop Environment configuration. #
+  #                                          #
+  ############################################
+
   imports = [
     ./extensions.nix
   ];
@@ -80,7 +86,7 @@
     # Configure Gnome Apps
     "org/gnome/Console" = {
       use-system-font = false;
-      custom-font = "AdwaitaMono Nerd Font 11";
+      custom-font = "AdwaitaMono Nerd Font 11"; # Required for Starship
     };
     "org/gnome/TextEditor" = {
       highlight-current-line = true;

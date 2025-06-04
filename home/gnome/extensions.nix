@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  ##########################################
+  #                                        #
+  # Install and configure GNOME Extensions #
+  #                                        #
+  ##########################################
+
   # Install extension packages
   home.packages = with pkgs; [
     gnomeExtensions.blur-my-shell
