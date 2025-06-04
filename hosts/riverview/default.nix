@@ -122,6 +122,9 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
+  # TODO: when breaking this file up, would it make sense to include this
+  # ... in home/gnome and simply import it, allowing for an easy few-line
+  # ... switch between DE's as needed?
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
