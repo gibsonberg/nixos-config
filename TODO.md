@@ -3,8 +3,6 @@
 In no particular order,
 
 - Further configure GNOME
-    - Configure the following unused keys on laptop:
-        - F10/Camera Toggle, Activates "Web Cam"
     - Set default apps for file types declaratively
     - Adjust wallpaper dir
     - Set icon theme (papyrus? other?)

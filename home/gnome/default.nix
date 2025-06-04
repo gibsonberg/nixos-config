@@ -64,6 +64,9 @@
       screenshot = [ "Print" ];
       show-screenshot-ui = [ "<Shift><Super>s" ];
     };
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      mic-mute = [ "WebCam" ];
+    };
     ## Custom
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Launch Terminal";
