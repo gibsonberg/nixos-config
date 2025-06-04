@@ -24,5 +24,6 @@
   environment.systemPackages = with pkgs; [
     amberol # audio player replacement
     celluloid # video player replacement
+    papirus-icon-theme # icon theme replacement
   ];
 }

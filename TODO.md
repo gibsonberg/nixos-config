@@ -5,7 +5,6 @@ In no particular order,
 - Further configure GNOME
     - Set default apps for file types declaratively
     - Adjust wallpaper dir
-    - Set icon theme (papyrus? other?)
 - Configure software
     - Configure celluloid (doesn't use dconf?)
     - Configure fastfetch & add to fish init
