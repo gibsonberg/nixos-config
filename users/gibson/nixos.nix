@@ -1,11 +1,11 @@
 { config, pkgs, inputs, ... }:
 
 {
-  ###############################
-  #                             #
-  # Gibson' NixOS Configuration #
-  #                             #
-  ###############################
+  ################################
+  #                              #
+  # Gibson's NixOS Configuration #
+  #                              #
+  ################################
   
   programs = {
     # Enable fish and set as interactive shell.
