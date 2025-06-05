@@ -9,13 +9,14 @@
 
   imports = [
     ./extensions.nix
+
+    ../icons
   ];
 
   dconf.settings = {
     # Set dark mode & icon theme
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      icon-theme = "Papirus-Dark";
     };
 
     # Set wallpaper

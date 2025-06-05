@@ -39,7 +39,6 @@
 
     # Fonts & Icons
     nerd-fonts.adwaita-mono
-    papirus-icon-theme
   ];
 
   programs = {
