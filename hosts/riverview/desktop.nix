@@ -1,14 +1,17 @@
 { config, pkgs, inputs, ... }:
 
 {
-  ############################################
-  #                                          #
-  # Remove unnecessary GNOME packages.       #
-  # Replacements are included where desired. #
-  #                                          #
-  ############################################
+  #############################################
+  #                                           #
+  # Define desktop environment for riverview. #
+  #                                           #
+  #############################################
 
-  # Exclue unnecessary packages
+  # Enable the GNOME Desktop Environment.
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
+  # Exclude unnecessary packages
   environment.gnome.excludePackages = with pkgs; [
     geary # email client
     epiphany # web browser
@@ -24,6 +27,6 @@
   environment.systemPackages = with pkgs; [
     amberol # audio player replacement
     celluloid # video player replacement
-    papirus-icon-theme # icon theme replacement
   ];
+
 }

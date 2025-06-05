@@ -17,9 +17,9 @@
 
       ./programs.nix
       ./users.nix
+      ./desktop.nix # define desktop environment
 
       ./hardware-configuration.nix
-      ../../home/gnome/debloat.nix # can this go in home-manager instead?
       ../../users/gibson/nixos.nix # can this be made user-agnostic
     ];
 
@@ -45,15 +45,11 @@
 
   # Services ###################################################################
 
+  # TODO: check which of these are only required for GNOME and consider moving
+  # ... them over to desktop.nix?
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  # TODO: when breaking this file up, would it make sense to include this
-  # ... in home/gnome and simply import it, allowing for an easy few-line
-  # ... switch between DE's as needed?
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
