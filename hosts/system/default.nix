@@ -7,6 +7,10 @@
   #                                               #
   #################################################
 
+  imports = [
+    ./programs.nix
+  ];
+
   # Boot #######################################################################
  
   # Bootloader.
@@ -86,25 +90,8 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # System Packages ############################################################
-  
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Install packages
-  environment.systemPackages = with pkgs; [
-    git
-    neovim
-    ripgrep
-    tree
-    wget
-  ];
-
   # Nix environment ############################################################
   
-  # Set the default editor
-  environment.variables.EDITOR = "nvim";
-
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

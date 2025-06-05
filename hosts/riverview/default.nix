@@ -14,12 +14,17 @@
   imports =
     [ # Include the results of the hardware scan.
       ../system # items shared across all hosts
+
+      ./programs.nix
+      ./users.nix
+
       ./hardware-configuration.nix
       ../../home/gnome/debloat.nix # can this go in home-manager instead?
       ../../users/gibson/nixos.nix # can this be made user-agnostic
     ];
 
-# BOOT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  # Boot #######################################################################
+
   # LUKS
   boot.initrd.luks.devices."luks-576b561a-3fe7-4cf8-93b6-0824e6923e92".device = "/dev/disk/by-uuid/576b561a-3fe7-4cf8-93b6-0824e6923e92";
 
@@ -30,15 +35,15 @@
   #   user = "gibson";
   # };
 
-# BOOT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# NETWORKING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  # Networking #################################################################
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "riverview"; # Define your hostname.
 
-# NETWORKING <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# SERVICES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  # Define hostname.
+  networking.hostName = "riverview";
+
+  # Services ###################################################################
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -97,37 +102,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-# SERVICES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# USERS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.gibson = {
-    isNormalUser = true;
-    description = "Gibson Berg";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
-
-# USERS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# PROGRAMS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    wl-clipboard
-
-    # Zen Browser
-    # Remove with flake once nixpkgs packages this
-    inputs.zen-browser.packages.${pkgs.system}.default
-  ];
-  
-# PROGRAMS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-# NIX/ENV >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  # Nix environment ############################################################
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
