@@ -34,6 +34,3 @@ In no particular order,
         - ripgrep-all ?
         - wiki-tui?
         - presenterm?
-- Revisit Autologin:
-    - It seems to WORK out of the box with LUKS: password is transferred to keyring
-    - HOWEVER, it seems to cause GNOME to crash soon after boot when paired w/ initrd, plymouth

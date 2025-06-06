@@ -28,12 +28,16 @@
   # LUKS
   boot.initrd.luks.devices."luks-576b561a-3fe7-4cf8-93b6-0824e6923e92".device = "/dev/disk/by-uuid/576b561a-3fe7-4cf8-93b6-0824e6923e92";
 
-  # Auto-login (TEMPORARILY DISABLED - known crash interaction w/ plymouth & initrd)
+  # Auto-login
   # NOTE: may need to be removed for multi-user setup
-  # services.displayManager.autoLogin = {
-  #   enable = true;
-  #   user = "gibson";
-  # };
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "gibson";
+  };
+  systemd.services = {
+    "getty@tty1".enable = false;
+    "autovt@tty1".enable = false;
+  };
 
   # Networking #################################################################
 
