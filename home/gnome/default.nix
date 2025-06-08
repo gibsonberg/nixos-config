@@ -9,6 +9,7 @@
 
   imports = [
     ./extensions.nix
+    ./mimetypes.nix
 
     ../icons
   ];
@@ -102,4 +103,5 @@
       background-play = false;
     };
   };
+
 }

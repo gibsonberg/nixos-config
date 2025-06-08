@@ -3,7 +3,6 @@
 In no particular order,
 
 - Further configure GNOME
-    - Set default apps for file types declaratively
     - Adjust wallpaper dir
         - I tend to set my wallpapers by system, and I'm currently the only user...
         - As such, it may work to set wallpapers via a hostname vairable
