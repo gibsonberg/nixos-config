@@ -49,6 +49,7 @@
       # Set fish init; disable greeting
       interactiveShellInit = ''
         set fish_greeting
+        fastfetch -c ~/nixos-config/home/fastfetch/config.jsonc -l ~/nixos-config/home/fastfetch/bear.txt --logo-type file --logo-width 29 --logo-height 14 --logo-padding 2 --logo-padding-top 2
       '';
     };
   };

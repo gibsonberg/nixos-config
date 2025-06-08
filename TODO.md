@@ -9,7 +9,6 @@ In no particular order,
         - And feeding that into my GNOME config to select the appropriate filename
 - Configure software
     - Configure celluloid (doesn't use dconf?)
-    - Configure fastfetch & add to fish init
     - Make Steam use GNOME cursors
     - Configure Neovim
         - Plugins?
