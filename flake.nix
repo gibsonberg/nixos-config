@@ -6,10 +6,6 @@
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
-      # The 'follows' keyword in inputs is used for inheritance.
-      # Here, 'inputs.nixpkgs' of home-manager is kept consistent with
-      # the 'inputs.nixpkgs' of the current flake,
-      # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Zen Browser Flake until nixpkgs adds it
@@ -23,11 +19,18 @@
       nixosConfigurations = {
         # The host with hostname 'riverview' will use this configuration.
 	# TODO: prep for multi-host if want to continue on 'hiawatha'
-	riverview = nixpkgs.lib.nixosSystem {
+	riverview = let 
+          hostname = "riverview"; # define hostname
+	  specialArgs = {inherit hostname;}; # for some reason necessary to inherit hostname?
+	in
+	nixpkgs.lib.nixosSystem {
+	  inherit specialArgs;
           system = "x86_64-linux";
-	  specialArgs = { inherit inputs; };
+	  # specialArgs = { inherit inputs; };
           modules = [
             ./hosts/riverview 
+	    { _module.args = { inherit inputs; };} # using this instead of specialArgs due to
+	    # ... inheritance issue commented on above.
             
             # make home-manager as a module of nixos
 	    # so that home-manager configuration will
@@ -39,6 +42,7 @@
               home-manager.useUserPackages = true;
               # TODO: set up flake to alllow for multiple users?
 	      home-manager.users.gibson = import ./users/gibson/home.nix;
+	      home-manager.extraSpecialArgs = specialArgs; # pass hostname along to home-manager
 
               # Optionally, use home-manager.extraSpecialArgs to pass
               # arguments to home.nix

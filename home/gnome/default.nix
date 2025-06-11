@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, hostname, ... }:
 
 {
   ############################################
@@ -21,16 +21,13 @@
     };
 
     # Set wallpaper
-    # TODO: have this inherit user's name from flake.nix or something
-    # ... & use to define preferred wallpaper by user
-    # ... i.e. file:///home/{user}/nixos-config/wallpaper.jpg
-    # ... or find a better location for this (like in each user's
-    # ... home directory within this config subdirectory).
-    # ... Maybe "/home/gibson/nixos-config/users/{username}/wallpaper.jpg"!!
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-      picture-uri = "file:///home/gibson/nixos-config/wallpaper.jpg";
-      picture-uri-dark = "file:///home/gibson/nixos-config/wallpaper.jpg";
+
+      # Set both backgrounds. May in the future want to make this agnostic as to whose home
+      # ... maybe rely on /etc/nixos symlink?
+      picture-uri = "file:///home/gibson/nixos-config/hosts/${hostname}/wallpaper.jpg";
+      picture-uri-dark = "file:///home/gibson/nixos-config/hosts/${hostname}/wallpaper.jpg";
     };
 
     "org/gnome/shell" = {

@@ -2,11 +2,6 @@
 
 In no particular order,
 
-- Further configure GNOME
-    - Adjust wallpaper dir
-        - I tend to set my wallpapers by system, and I'm currently the only user...
-        - As such, it may work to set wallpapers via a hostname vairable
-        - And feeding that into my GNOME config to select the appropriate filename
 - Configure software
     - Configure celluloid (doesn't use dconf?)
     - Make Steam use GNOME cursors
