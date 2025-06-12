@@ -3,12 +3,8 @@
 In no particular order,
 
 - Configure software
-    - Configure celluloid (doesn't use dconf?)
     - Configure Neovim
-        - Plugins?
-            - telescope?
-            - better nix highlighting?
-            - nvim-cmp?
+        - Look into additional plugins?
         - Should nvim configuration actually be system-wide since install is system-wide?
 - Experiment with new software
     - Rust-based utilities (See NoBoilerPlate video)
@@ -24,3 +20,8 @@ In no particular order,
         - ripgrep-all ?
         - wiki-tui?
         - presenterm?
+- Change wallpaper dir again?
+    - users/${username}/${hostname}.jpg would allow any user to select per-host wallpapers
+    - would have to pass username from shell or something rather than from nixos flake as-is
+    - ... because currently it would be static, and would not improve this.
+- Take another look at hosts/system concept... figure out which programs should really be universal
