@@ -27,6 +27,7 @@
   environment.systemPackages = with pkgs; [
     amberol # audio player replacement
     celluloid # video player replacement
+    deja-dup # backup tool 
   ];
 
 }

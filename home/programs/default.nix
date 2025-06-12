@@ -11,17 +11,21 @@
     
     # GNOME
     # gnome-tweaks
+    gnome-boxes # simple VM
     
     # Graphical tools
     alpaca # local LLM client
+    calibre # e-book software suite
     dialect # translation
     foliate # epub reader
     gimp3 # image editor
     gnome-solanum # pomodoro timer
+    inkscape # vector graphics editor
     obsidian # markdown editor/wiki
     onlyoffice-desktopeditors # office suite
     resources # system monitor
-    # transmission_4 # torrent client
+    solaar # logitech unifying receiver devices manager
+    # transmission_4 # torrent client, for some reason not working?
     
     # Command-line tools
     btop # htop replacement
