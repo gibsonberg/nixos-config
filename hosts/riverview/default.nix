@@ -80,6 +80,8 @@
     #media-session.enable = true;
   };
 
+  services.tailscale.enable = true; # tailscale VPN
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

@@ -26,6 +26,7 @@
     resources # system monitor
     solaar # logitech unifying receiver devices manager
     # transmission_4 # torrent client, for some reason not working?
+    trayscale # GTK frontend for tailscale
     
     # Command-line tools
     btop # htop replacement
