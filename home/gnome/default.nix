@@ -36,6 +36,7 @@
         "zen.desktop"
 	"org.gnome.Nautilus.desktop"
 	"net.nokyan.Resources.desktop"
+	"dev.deedles.Trayscale.desktop"
       ];
     };
 

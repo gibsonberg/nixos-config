@@ -47,6 +47,9 @@
   # Define hostname.
   networking.hostName = "riverview";
 
+  # Required to fix tailscale exit node not having internet access.
+  networking.firewall.checkReversePath = "loose";
+
   # Services ###################################################################
 
   # TODO: check which of these are only required for GNOME and consider moving

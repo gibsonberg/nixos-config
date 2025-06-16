@@ -28,6 +28,7 @@
     amberol # audio player replacement
     celluloid # video player replacement
     deja-dup # backup tool 
+    trayscale # tailscale GTK frontend
   ];
 
 }
