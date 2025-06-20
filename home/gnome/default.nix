@@ -97,6 +97,7 @@
       restore-session = false;
       keybindings = "vim";
     };
+    "org/gnome/nautilus/preferences".default-folder-viewer = "list-view";
     "io/bassi/Amberol" = {
       background-play = false;
     };
