@@ -2,7 +2,6 @@
 
 In no particular order,
 
-- Get Solaar working
 - Fix default apps
 - Set up hiawatha drives, other settings as needed
 - Configure software
