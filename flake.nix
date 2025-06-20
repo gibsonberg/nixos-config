@@ -49,6 +49,38 @@
             }
           ];
         };
+      #
+	hiawatha = let 
+          hostname = "hiawatha"; # define hostname
+	  specialArgs = {inherit hostname;}; # for some reason necessary to inherit hostname?
+	in
+	nixpkgs.lib.nixosSystem {
+	  inherit specialArgs;
+          system = "x86_64-linux";
+	  # specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/hiawatha
+	    { _module.args = { inherit inputs; };} # using this instead of specialArgs due to
+	    # ... inheritance issue commented on above.
+            
+            # make home-manager as a module of nixos
+	    # so that home-manager configuration will
+	    # be deployed automatically when executing
+	    # 'nixos-rebuild-switch'
+	    home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              # TODO: set up flake to alllow for multiple users?
+	      home-manager.users.gibson = import ./users/gibson/home.nix;
+	      home-manager.extraSpecialArgs = specialArgs; # pass hostname along to home-manager
+
+              # Optionally, use home-manager.extraSpecialArgs to pass
+              # arguments to home.nix
+            }
+          ];
+        };
+
       };
     };
 }
