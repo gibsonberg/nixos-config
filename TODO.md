@@ -3,7 +3,9 @@
 In no particular order,
 
 - Fix default apps
-- Set up hiawatha drives, other settings as needed
+- Set up hiawatha drives
+  - consider other mount point besides /mnt ?
+- Configure hiawatha-specific settings, etc.
 - Configure software
     - Configure Neovim
         - Look into additional plugins?

@@ -23,6 +23,22 @@
       ../../users/gibson/nixos.nix # can this be made user-agnostic
     ];
 
+  # Boot #######################################################################
+
+  # Automount partitions
+  fileSystems."/mnt/media" =
+    { device = "/dev/disk/by-uuid/d76e7fbe-c943-4950-ab07-58148f80c350";
+      fsType = "ext4";
+  };
+  fileSystems."/mnt/backup" =
+    { device = "/dev/disk/by-uuid/9000996e-54e8-48a2-8f2f-809ff1b3d181";
+      fsType = "ext4";
+  };
+  fileSystems."/mnt/games" =
+    { device = "/dev/disk/by-uuid/2c6546cd-dc74-479a-ac8b-d73b5293cb63";
+      fsType = "ext4";
+  };
+
   # Networking #################################################################
 
   # Enable networking
