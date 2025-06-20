@@ -15,9 +15,12 @@
   environment.systemPackages = with pkgs; [
     wl-clipboard
 
+    solaar # Logitech unifying receiver client
+
     # Zen Browser
     # Remove with flake once nixpkgs packages this
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
+  hardware.logitech.wireless.enable = true; # Necessary for solaar
 }

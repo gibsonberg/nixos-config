@@ -24,7 +24,6 @@
     obsidian # markdown editor/wiki
     onlyoffice-desktopeditors # office suite
     resources # system monitor
-    solaar # logitech unifying receiver devices manager
     # transmission_4 # torrent client, for some reason not working?
     
     # Command-line tools
