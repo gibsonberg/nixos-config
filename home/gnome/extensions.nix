@@ -41,6 +41,7 @@
     custom-background-color = true;
     background-color = "rgb(0,0,0)";
     click-action = "previews";
+    show-mounts = false;
     }; 
   };
 }
