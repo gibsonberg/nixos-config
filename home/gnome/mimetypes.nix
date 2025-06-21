@@ -68,7 +68,15 @@
       
       # PDF
       "application/pdf" = [ "org.gnome.Evince.desktop" ];
+
+      # Text
+      "text/markdown" = [ "org.gnome.TextEditor.desktop" ];
+
+      # Office
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "onlyoffice-desktopeditors.desktop" ];
+
     };
+
     associations.added = {
       # Audio files	
       "audio/mpeg" = [ "io.bassi.Amberol.desktop" ];
@@ -125,6 +133,13 @@
       
       # PDF
       "application/pdf" = [ "org.gnome.Evince.desktop" ];
+
+      # Text
+      "text/markdown" = [ "org.gnome.TextEditor.desktop" ];
+
+      # Office
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = [ "onlyoffice-desktopeditors.desktop" ];
+
     };
   };
   # Need to force this for some reason to get Home Manager to not fail to start

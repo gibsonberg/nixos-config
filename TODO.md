@@ -2,9 +2,9 @@
 
 In no particular order,
 
-- Fix default apps
 - Set up hiawatha drives
   - consider other mount point besides /mnt ?
+  - Configure XDG to set ~/.config/user-dirs.dirs to prevent home folders (documents, music, etc.) from losing images?
 - Configure hiawatha-specific settings, etc.
 - Configure software
     - Configure Neovim
