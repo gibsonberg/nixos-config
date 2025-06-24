@@ -7,6 +7,7 @@ In no particular order,
     - Configure Neovim
         - Look into additional plugins?
         - Should nvim configuration actually be system-wide since install is system-wide?
+    - Configure Solaar Rules declaratively?
 - Experiment with new software
     - Rust-based utilities (See NoBoilerPlate video)
         - uutils coreutils?

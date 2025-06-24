@@ -13,6 +13,7 @@
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.lock-keys
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.solaar-extension
   ];
 
   dconf.settings = {
