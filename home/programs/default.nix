@@ -14,7 +14,6 @@
     gnome-boxes # simple VM
     
     # Graphical tools
-    alpaca # local LLM client
     calibre # e-book software suite
     dialect # translation
     foliate # epub reader
