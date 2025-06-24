@@ -13,7 +13,7 @@
         },
         "kernel",
         "uptime",
-	"break",
+        "break",
         "packages",
         "shell",
         {
@@ -23,7 +23,7 @@
         "de",
         "wm",
         "terminal",
-	"break",
+        "break",
         {
             "type": "cpu",
             "key": "Temperature",
@@ -55,6 +55,7 @@
             "key": "LAN IP",
             "showPrefixLen": false
         },
+        "break",
         {
             "type":"colors",
             "symbol":"circle"
