@@ -28,7 +28,13 @@
     amberol # audio player replacement
     celluloid # video player replacement
     deja-dup # backup tool 
+    gnome-remote-desktop # allow RDP connections
     trayscale # tailscale GTK frontend
   ];
+
+  # Necessary for remote desktop to show up in settings
+  systemd.services.gnome-remote-desktop = {
+    wantedBy = [ "graphical.target" ];
+  };
 
 }
