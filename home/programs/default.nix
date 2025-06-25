@@ -22,6 +22,7 @@
     inkscape # vector graphics editor
     obsidian # markdown editor/wiki
     onlyoffice-desktopeditors # office suite
+    remmina # RDP client
     resources # system monitor
     # transmission_4 # torrent client, for some reason not working?
     
