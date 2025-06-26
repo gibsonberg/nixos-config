@@ -16,7 +16,6 @@
     neovim
     ripgrep
     tree
-    waypipe # ssh -X but for wayland
     wget
   ];
 
