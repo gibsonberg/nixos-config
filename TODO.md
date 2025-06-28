@@ -13,8 +13,6 @@ In no particular order,
         - uutils coreutils?
         - fd?
         - bat?
-        - eza/
-        - zoxide? 
         - gitui?
         - du-dust?
         - evil-helix?

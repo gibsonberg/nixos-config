@@ -28,6 +28,7 @@
     
     # Command-line tools
     btop # htop replacement
+    eza # modern ls replacement
     fastfetch # device query util; TODO: include in fish init 
     iftop # network monitoring
     iotop # io monitoring
@@ -47,5 +48,10 @@
   programs = {
     # Enable fish in home-manager; also necessary in nixos system config?
     fish.enable = true;
+
+    zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+    };
   };
 }
