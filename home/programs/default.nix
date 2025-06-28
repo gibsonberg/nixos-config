@@ -28,18 +28,23 @@
     
     # Command-line tools
     btop # htop replacement
-    eza # modern ls replacement
+    cowsay
     fastfetch # device query util; TODO: include in fish init 
+    hugo # static site generator
     iftop # network monitoring
     iotop # io monitoring
     starship # customizable prompt; see below
     yt-dlp
-    # ripgrep # recursively searches directories for a regex pattern
     # nmap # networ discover/security auditing utility
-    
-    hugo # static site generator
-    
-    cowsay
+
+    # rust-based utils (TODO: consider making system-level install?)
+    bat # cat(1) clone w/ syntax highlighting
+    dust # disk usage utility
+    evil-helix # feature-complete editor
+    eza # modern ls replacement
+    fd # modern find replacement
+    ripgrep-all # ripgrep but within addl. filetypes
+    wiki-tui # wikipedia tui interface
 
     # Fonts & Icons
     nerd-fonts.adwaita-mono
@@ -49,6 +54,7 @@
     # Enable fish in home-manager; also necessary in nixos system config?
     fish.enable = true;
 
+    # Zoxide: intuitive replacement for cd
     zoxide = {
       enable = true;
       enableFishIntegration = true;

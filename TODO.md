@@ -9,16 +9,11 @@ In no particular order,
         - Should nvim configuration actually be system-wide since install is system-wide?
     - Configure Solaar Rules declaratively?
 - Experiment with new software
+    - Test out currnetly-installed utilities and (re)move as necessary
     - Rust-based utilities (See NoBoilerPlate video)
         - uutils coreutils?
-        - fd?
-        - bat?
         - gitui?
-        - du-dust?
-        - evil-helix?
         - ncspot -- is there a youtube equivalent?
-        - ripgrep-all ?
-        - wiki-tui?
         - presenterm?
 - Change wallpaper dir again?
     - users/${username}/${hostname}.jpg would allow any user to select per-host wallpapers
