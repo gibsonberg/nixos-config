@@ -38,6 +38,10 @@
     acceleration = "rocm";
   };
 
+  # Solaar
   hardware.logitech.wireless.enable = true; # Necessary for solaar
+  # Set Solaar to automatically launch on startup -- apply dpi settings
+  # shitty version of this https://github.com/nix-community/home-manager/issues/3447#issuecomment-1328294558
+  environment.etc."xdg/autostart/solaar.desktop".source = (pkgs.solaar + "/share/applications/solaar.desktop");
 
 }
