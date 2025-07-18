@@ -20,4 +20,9 @@
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
+  # Ollama: local LLM enabled as systemd service. Access with "ollama"
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+  };
 }
