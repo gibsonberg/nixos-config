@@ -17,6 +17,7 @@
     ripgrep
     tree
     wget
+    direnv
   ];
 
   # Set the default editor
