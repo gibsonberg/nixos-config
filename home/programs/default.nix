@@ -25,6 +25,7 @@
     remmina # RDP client
     resources # system monitor
     slack
+    wike # wikipedia reader
     # transmission_4 # torrent client, for some reason not working?
     
     # Command-line tools
