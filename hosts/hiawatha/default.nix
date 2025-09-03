@@ -85,7 +85,17 @@
   };
 
   services.tailscale.enable = true; # tailscale VPN
-
+  # TODO: follow issue at https://github.com/nixos/nixpkgs/issues/438765
+  #       comment out to test once resolved
+  #       remove once tailscale builds successfully with check phase
+  nixpkgs.overlays = [
+    (self: super: {
+      tailscale = super.tailscale.overrideAttrs (old: {
+        # This prevents the `checkPhase` (the test suite) from running.
+        doCheck = false;
+      });
+    })
+  ];
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
