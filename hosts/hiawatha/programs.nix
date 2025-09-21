@@ -23,6 +23,7 @@
     inputs.zen-browser.packages.${pkgs.system}.default
 
     # Camera mounting utilities
+    # https://discourse.nixos.org/t/mounting-of-camera-not-working-gphoto2-canon-camera/24038/6
     libgphoto2
     gphoto2
     gphoto2fs
