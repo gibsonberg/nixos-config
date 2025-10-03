@@ -15,6 +15,9 @@
   environment.systemPackages = with pkgs; [
     wl-clipboard
 
+    # alpaca # local LLM client
+    solaar # Logitech unifying receiver client
+
     # Zen Browser
     # Remove with flake once nixpkgs packages this
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -25,4 +28,11 @@
     enable = true;
     acceleration = "rocm";
   };
+
+  # Solaar
+  hardware.logitech.wireless.enable = true; # Necessary for solaar
+  # Set Solaar to automatically launch on startup -- apply dpi settings
+  # shitty version of this https://github.com/nix-community/home-manager/issues/3447#issuecomment-1328294558
+  environment.etc."xdg/autostart/solaar.desktop".source = (pkgs.solaar + "/share/applications/solaar.desktop");
+
 }
