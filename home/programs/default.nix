@@ -26,7 +26,7 @@
     resources # system monitor
     slack
     wike # wikipedia reader
-    # transmission_4 # torrent client, for some reason not working?
+    transmission_4-gtk # torrent client
     
     # Command-line tools
     btop # htop replacement
