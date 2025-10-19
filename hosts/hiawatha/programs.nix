@@ -27,6 +27,9 @@
     libgphoto2
     gphoto2
     gphoto2fs
+
+    # Photo editing
+    darktable
   ];
 
   ### Temporarily(?) replacing Alpaca with straight Ollama --
