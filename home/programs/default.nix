@@ -24,6 +24,7 @@
     onlyoffice-desktopeditors # office suite
     remmina # RDP client
     resources # system monitor
+    shotcut # video editor
     slack
     wike # wikipedia reader
     transmission_4-gtk # torrent client
