@@ -22,6 +22,7 @@
     inkscape # vector graphics editor
     obsidian # markdown editor/wiki
     onlyoffice-desktopeditors # office suite
+    picard # music tagger
     remmina # RDP client
     resources # system monitor
     shotcut # video editor
