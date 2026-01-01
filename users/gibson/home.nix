@@ -22,8 +22,10 @@
   # basic configuration of git 
   programs.git = {
     enable = true;
-    userName = "Gibson Berg";
-    userEmail = "berg.gibson@gmail.com";
+    settings = {
+      user.name = "Gibson Berg";
+      user.email = "berg.gibson@gmail.com";
+    };
   };
 
   programs = {
