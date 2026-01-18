@@ -23,6 +23,7 @@
     obsidian # markdown editor/wiki
     onlyoffice-desktopeditors # office suite
     picard # music tagger
+    prismlauncher # open-source minecraft launcher
     remmina # RDP client
     resources # system monitor
     shotcut # video editor
