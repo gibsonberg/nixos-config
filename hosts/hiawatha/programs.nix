@@ -20,7 +20,7 @@
 
     # Zen Browser
     # Remove with flake once nixpkgs packages this
-    inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # Camera mounting utilities
     # https://discourse.nixos.org/t/mounting-of-camera-not-working-gphoto2-canon-camera/24038/6

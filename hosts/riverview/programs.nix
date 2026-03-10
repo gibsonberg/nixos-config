@@ -20,7 +20,7 @@
 
     # Zen Browser
     # Remove with flake once nixpkgs packages this
-    inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   # Ollama: local LLM enabled as systemd service. Access with "ollama"
