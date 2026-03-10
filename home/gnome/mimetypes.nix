@@ -65,6 +65,12 @@
       "image/avif" = [ "org.gnome.Loupe.desktop" ];
       "image/heic" = [ "org.gnome.Loupe.desktop" ];
       "image/jxl" = [ "org.gnome.Loupe.desktop" ];
+
+      # Video
+      "video/mp4" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+      "video/x-matroska" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+      "video/quicktime" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+      "video/webm" = [ "io.github.celluloid_player.Celluloid.desktop" ];
       
       # PDF
       "application/pdf" = [ "org.gnome.Evince.desktop" ];
@@ -130,6 +136,12 @@
       "image/avif" = [ "org.gnome.Loupe.desktop" ];
       "image/heic" = [ "org.gnome.Loupe.desktop" ];
       "image/jxl" = [ "org.gnome.Loupe.desktop" ];
+
+      # Video
+      "video/mp4" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+      "video/x-matroska" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+      "video/quicktime" = [ "io.github.celluloid_player.Celluloid.desktop" ];
+      "video/webm" = [ "io.github.celluloid_player.Celluloid.desktop" ];
       
       # PDF
       "application/pdf" = [ "org.gnome.Evince.desktop" ];
