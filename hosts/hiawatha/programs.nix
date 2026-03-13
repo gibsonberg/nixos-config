@@ -32,21 +32,6 @@
     darktable
   ];
 
-  ### Temporarily(?) replacing Alpaca with straight Ollama --
-  ### The current Alpaca version in 25.05 seems to not have functioning ROCM
-  ### + doesn't "ollama stop" models upon closing for dedicated Ollama instances.
-  # # Hiawatha-specific package overrides
-  # nixpkgs.config.packageOverrides = pkgs: {
-  #   # Set up ROCM for ollama
-  #   alpaca = pkgs.alpaca.override { ollama = pkgs.ollama-rocm; };
-  # };
-
-  # Ollama: local LLM enabled as systemd service. Access with "ollama"
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-  };
-
   # Solaar
   hardware.logitech.wireless.enable = true; # Necessary for solaar
   # Set Solaar to automatically launch on startup -- apply dpi settings
