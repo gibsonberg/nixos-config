@@ -23,12 +23,6 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-  # Ollama: local LLM enabled as systemd service. Access with "ollama"
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-  };
-
   # Solaar
   hardware.logitech.wireless.enable = true; # Necessary for solaar
   # Set Solaar to automatically launch on startup -- apply dpi settings
