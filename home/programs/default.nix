@@ -19,6 +19,7 @@
     foliate # epub reader
     gimp3 # image editor
     gnome-solanum # pomodoro timer
+    heroic # heroic launcher for GoG, etc.
     inkscape # vector graphics editor
     obsidian # markdown editor/wiki
     onlyoffice-desktopeditors # office suite
