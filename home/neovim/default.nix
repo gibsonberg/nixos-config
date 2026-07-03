@@ -16,5 +16,7 @@
       pkgs.vimPlugins.plenary-nvim
       pkgs.vimPlugins.telescope-nvim
     ];
+    withRuby = false;
+    withPython3 = false;
   };
 }
