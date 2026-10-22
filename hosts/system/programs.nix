@@ -13,6 +13,7 @@
   # Install packages
   environment.systemPackages = with pkgs; [
     git
+    nano
     neovim
     ripgrep
     tree
